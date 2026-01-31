@@ -1,0 +1,30 @@
+<!DOCTYPE html> <html> <head> <title>Geopolitics 
+Survey</title> <style> 
+body{font-family:Arial;background:#f4f6f8;} 
+.container{
+  max-width:600px; margin:40px auto; 
+  background:white; padding:30px; 
+  border-radius:10px;
+}
+button{ padding:10px; background:#2980b9; 
+  color:white; border:none; border-radius:5px;
+}
+</style> </head> <body> <div class="container"> 
+<h2>Geopolitics Survey</h2> <select id="issue"> 
+<option>Ukraine–Russia</option> <option>Middle 
+East</option> <option>US–China</option> </select> 
+<textarea id="opinion" placeholder="Your 
+opinion"></textarea> <br><br> <button 
+onclick="save()">Submit</button> </div> <script> 
+function save(){
+  let data={ user:localStorage.getItem("username"), 
+    issue:issue.value, opinion:opinion.value
+  };
+  let all = 
+  JSON.parse(localStorage.getItem("responses")) || 
+  []; all.push(data); 
+  localStorage.setItem("responses", 
+  JSON.stringify(all)); alert("Response saved!");
+}
+</script> </body>
+</html>

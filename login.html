@@ -1,0 +1,28 @@
+<!DOCTYPE html> <html> <head> <title>Login</title> 
+<style> body{
+  font-family: Arial; background:#0f2027; 
+  color:white; display:flex; justify-content:center; 
+  align-items:center; height:100vh;
+}
+.box{ background:#203a43; padding:30px; 
+  border-radius:10px; width:300px;
+}
+input,button{ width:100%; padding:10px; margin:10px 
+  0; border-radius:5px; border:none;
+}
+button{background:#1abc9c;font-weight:bold;} 
+</style> </head> <body> <div class="box"> 
+<h2>Login</h2> <input id="u" placeholder="Username"> 
+<input id="p" type="password" 
+placeholder="Password"> <button 
+onclick="login()">Login</button> </div> <script> 
+function login(){
+  if( u.value === localStorage.getItem("username") 
+    && p.value === localStorage.getItem("password")
+  ){ window.location="survey.html";
+  }else{
+    alert("Invalid login");
+  }
+}
+</script> </body>
+</html>

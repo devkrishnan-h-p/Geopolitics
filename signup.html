@@ -1,0 +1,28 @@
+<!DOCTYPE html> <html> <head> <title>Sign Up</title> 
+<style> body{
+  font-family: Arial; background:#1e272e; 
+  color:white; display:flex; justify-content:center; 
+  align-items:center; height:100vh;
+}
+.box{ background:#485460; padding:30px; 
+  border-radius:10px; width:300px;
+}
+input,button{ width:100%; padding:10px; margin:10px 
+  0; border-radius:5px; border:none;
+}
+button{background:#0be881;font-weight:bold;} 
+</style> </head> <body> <div class="box"> <h2>Sign 
+Up</h2> <input id="user" placeholder="Username" 
+required> <input id="pass" type="password" 
+placeholder="Password" required> <button 
+onclick="signup()">Create Account</button> 
+<p>Already have an account? <a 
+href="login.html">Login</a></p> </div> <script> 
+function signup(){
+  localStorage.setItem("username", user.value); 
+  localStorage.setItem("password", pass.value); 
+  alert("Account created!"); 
+  window.location="login.html";
+}
+</script> </body>
+</html>
